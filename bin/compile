@@ -9,10 +9,10 @@ function indent() {
 }
 
 BUILD_DIR="$1"
-SOURCE_DIR="$(dirname $0)/../fonts.tar.gz"
-TARGET_DIR="$BUILD_DIR/app/assets/fonts"
+SOURCE_DIR="$(dirname $0)/../assets.tar.gz"
+TARGET_DIR="$BUILD_DIR/app/assets"
 
-echo "-----> Extracting fonts to $TARGET_DIR"
+echo "-----> Extracting assets from https://github.com/commack/heroku-buildpack-converter-fonts/assets.tar.gz to $TARGET_DIR"
 
 mkdir -p "$TARGET_DIR"
 tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
